@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Net;
     using Asser.Sc4Buddy.Server.Api.V1.Models;
+    using Newtonsoft.Json;
     using RestSharp;
 
     public class BuddyServerClient : IBuddyServerClient
@@ -11,6 +12,8 @@
         private const int MaxFilesPerPage = 100;
 
         private readonly IRestClient client;
+
+        public bool ServerEnabled { get; set; } = false;
 
         public BuddyServerClient(IRestClient client)
         {
@@ -23,28 +26,33 @@
 
         public Plugin GetPlugin(Guid pluginId)
         {
-            var request = new RestRequest("plugins/{pluginId}", Method.GET) { RequestFormat = DataFormat.Json };
+            var request = new RestRequest("plugins/{pluginId}", Method.Get) { RequestFormat = DataFormat.Json };
             request.AddUrlSegment("pluginId", pluginId.ToString());
 
-            var response = client.Get<Plugin>(request);
+            var response = client.Get(request);
             if (response.IsSuccessful == false && response.ErrorException != null)
             {
                 throw response.ErrorException;
             }
 
-            return response.Data;
+            return JsonConvert.DeserializeObject<Plugin>(response.Content);
         }
 
         private IEnumerable<T> GetAllItems<T>(string method)
         {
+            if(ServerEnabled == false)
+            {
+                yield break;
+            }
+
             var page = 1;
             do
             {
-                var request = new RestRequest(method, Method.GET) { RequestFormat = DataFormat.Json };
+                var request = new RestRequest(method, Method.Get) { RequestFormat = DataFormat.Json };
                 request.AddQueryParameter("page", page + string.Empty);
                 request.AddQueryParameter("perPage", MaxFilesPerPage + string.Empty);
 
-                var response = client.Get<List<T>>(request);
+                var response = client.Get(request);
 
                 if (response.IsSuccessful == false)
                 {
@@ -60,12 +68,14 @@
                     }
                 }
 
-                foreach (var item in response.Data)
+                var data = JsonConvert.DeserializeObject<List<T>>(response.Content);
+
+                foreach (var item in data)
                 {
                     yield return item;
                 }
 
-                if (response.Data.Count < MaxFilesPerPage)
+                if (data.Count < MaxFilesPerPage)
                 {
                     yield break;
                 }
