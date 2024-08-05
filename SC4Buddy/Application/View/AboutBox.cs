@@ -1,6 +1,5 @@
 ﻿namespace Nihei.SC4Buddy.Application.View
 {
-    using System.Deployment.Application;
     using System.IO;
     using System.Reflection;
     using System.Windows.Forms;
@@ -99,7 +98,7 @@
             Text = $"About {AssemblyTitle}";
             labelProductName.Text = AssemblyProduct;
             labelVersion.Text =
-                $"Version {(ApplicationDeployment.IsNetworkDeployed ? ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString() : "Unknown")}";
+                $"Version {Assembly.GetExecutingAssembly().GetName().Version}";
             labelCopyright.Text = AssemblyCopyright;
             labelCompanyName.Text = AssemblyCompany;
             textBoxDescription.Text = AssemblyDescription;

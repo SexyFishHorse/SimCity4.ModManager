@@ -1,13 +1,13 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SC4Buddy", "SC4Buddy\SC4Buddy.csproj", "{CA16821A-BC90-4653-A0F6-B35DF6CE8F70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SC4Buddy", "SC4Buddy\SC4Buddy.csproj", "{CA16821A-BC90-4653-A0F6-B35DF6CE8F70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{A2D89F0D-4519-441F-8F6D-5BB32490664B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{A2D89F0D-4519-441F-8F6D-5BB32490664B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NiheiCommon", "NiheiCommon\NiheiCommon.csproj", "{43F9AF3F-D57D-421D-BA98-87FD499CA314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NiheiCommon", "NiheiCommon\NiheiCommon.csproj", "{43F9AF3F-D57D-421D-BA98-87FD499CA314}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AAC17363-C292-42F8-9E16-0523F2F0825E}"
 	ProjectSection(SolutionItems) = preProject
@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuddyServerApiClient", "BuddyServerApiClient\BuddyServerApiClient.csproj", "{D708A5BD-DB4C-4B5A-A703-FCBFBB8ABE4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuddyServerApiClient", "BuddyServerApiClient\BuddyServerApiClient.csproj", "{D708A5BD-DB4C-4B5A-A703-FCBFBB8ABE4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,20 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA16821A-BC90-4653-A0F6-B35DF6CE8F70}</ProjectGuid>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Nihei.SC4Buddy</RootNamespace>
-    <AssemblyName>SC4Buddy</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
-    <TargetFrameworkProfile />
     <PublishUrl>ftp://web17.gigahost.dk/www/static.nihei.dk/downloads/sc4buddy/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -38,29 +29,17 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>
     </DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup>
@@ -82,349 +61,46 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ByteSize, Version=2.1.2.0, Culture=neutral, PublicKeyToken=036f71e5fc483cd1, processorArchitecture=MSIL">
-      <HintPath>..\packages\ByteSize.2.1.2\lib\net45\ByteSize.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net, Version=2.0.17.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.17\lib\net45\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="MoreLinq, Version=4.3.0.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
-      <HintPath>..\packages\morelinq.4.3.0\lib\netstandard2.0\MoreLinq.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp, Version=111.4.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.111.4.1\lib\net471\RestSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpCompress, Version=0.37.2.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpCompress.0.37.2\lib\net462\SharpCompress.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Design" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encoding.CodePages, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Encoding.CodePages.8.0.0\lib\net462\System.Text.Encoding.CodePages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="ZstdSharp, Version=0.8.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
-      <HintPath>..\packages\ZstdSharp.Port.0.8.1\lib\net462\ZstdSharp.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Application\Models\ColorDepth.cs" />
-    <Compile Include="Application\Models\CpuPriority.cs" />
-    <Compile Include="Application\Models\CursorColorDepth.cs" />
-    <Compile Include="Application\Control\GameArgumentsHelper.cs" />
-    <Compile Include="Application\Control\GameLauncher.cs" />
-    <Compile Include="Application\Control\ISettingsController.cs">
+    <Compile Update="Application\Control\ISettingsController.cs">
       <DependentUpon>SettingsController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Application\Models\RenderMode.cs" />
-    <Compile Include="Application\Utilities\FileSystemLocationsUtil.cs" />
-    <Compile Include="Application\View\ChangelogForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application\View\ChangelogForm.Designer.cs">
-      <DependentUpon>ChangelogForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\Control\IPluginsController.cs">
+    <Compile Update="Plugins\Control\IPluginsController.cs">
       <DependentUpon>PluginsController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plugins\Control\NonPluginFilesScanner.cs" />
-    <Compile Include="Plugins\Control\FolderScannerController.cs" />
-    <Compile Include="Plugins\Control\PluginCopier.cs" />
-    <Compile Include="Plugins\Control\PluginGroupController.cs" />
-    <Compile Include="Configuration\Settings.cs" />
-    <Compile Include="Application\Control\SettingsController.cs" />
-    <Compile Include="Plugins\Control\PluginsController.cs" />
-    <Compile Include="Plugins\DataAccess\PluginsDataAccess.cs" />
-    <Compile Include="Plugins\Services\DependencyChecker.cs" />
-    <Compile Include="Remote\Models\BuddyServerException.cs" />
-    <Compile Include="Remote\Utils\ApiConnect.cs" />
-    <Compile Include="Remote\Utils\ApiConnectCodes.cs" />
-    <Compile Include="UserFolders\Control\FolderScanner.cs" />
-    <Compile Include="DataAccess\Entities.cs" />
-    <Compile Include="DataAccess\EntityFactory.cs" />
-    <Compile Include="DataAccess\IEntities.cs">
+    <Compile Update="DataAccess\IEntities.cs">
       <DependentUpon>Entities.cs</DependentUpon>
     </Compile>
-    <Compile Include="Application\DataAccess\SettingsDataAccess.cs" />
-    <Compile Include="Plugins\Installer\FileHandlers\ArchiveHandler.cs" />
-    <Compile Include="Plugins\Installer\InstallerEventArgs\InstalledPluginEventArgs.cs" />
-    <Compile Include="Plugins\Installer\InstallerEventArgs\InstallPluginEventArgs.cs" />
-    <Compile Include="Plugins\Installer\InstallerEventArgs\InstallPluginFailureEventArgs.cs" />
-    <Compile Include="Plugins\Installer\InstallerEventArgs\InstallProgressEventArgs.cs" />
-    <Compile Include="Plugins\Installer\PluginFileComparer.cs" />
-    <Compile Include="Plugins\Installer\PluginInstaller.cs" />
-    <Compile Include="Plugins\Installer\FileHandlers\BaseHandler.cs" />
-    <Compile Include="Plugins\Installer\FileHandlers\DatHandler.cs" />
-    <Compile Include="UserFolders\Control\IUserFolderController.cs">
+    <Compile Update="UserFolders\Control\IUserFolderController.cs">
       <DependentUpon>UserFolderController.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserFolders\Control\IUserFoldersController.cs">
+    <Compile Update="UserFolders\Control\IUserFoldersController.cs">
       <DependentUpon>UserFoldersController.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserFolders\Control\UserFolderController.cs" />
-    <Compile Include="Plugins\Installer\UserFolderListener.cs" />
-    <Compile Include="Plugins\Installer\PluginInstallerThread.cs" />
-    <Compile Include="Plugins\Installer\InstallerEventArgs\ReadmeFilesEventArgs.cs" />
-    <Compile Include="Resources\LocalizationStrings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LocalizationStrings.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\FileTypeInfo.cs" />
-    <Compile Include="Model\ModelBase.cs" />
-    <Compile Include="Model\NonPluginFileRemovalSummary.cs" />
-    <Compile Include="Model\NonPluginFileTypeCandidateInfo.cs" />
-    <Compile Include="Model\Plugin.cs" />
-    <Compile Include="Model\PluginFile.cs" />
-    <Compile Include="Model\PluginGroup.cs" />
-    <Compile Include="Model\QuarantinedFile.cs" />
-    <Compile Include="Model\UserFolder.cs" />
-    <Compile Include="Model\ValidationResult.cs" />
-    <Compile Include="Plugins\Services\IDependencyChecker.cs">
+    <Compile Update="Plugins\Services\IDependencyChecker.cs">
       <DependentUpon>DependencyChecker.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plugins\Services\IPluginMatcher.cs">
+    <Compile Update="Plugins\Services\IPluginMatcher.cs">
       <DependentUpon>PluginMatcher.cs</DependentUpon>
     </Compile>
-    <Compile Include="Plugins\Services\PluginMatcher.cs" />
-    <Compile Include="Configuration\LauncherSettings.cs" />
-    <Compile Include="Application\View\AboutBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application\View\AboutBox.Designer.cs">
-      <DependentUpon>AboutBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserFolders\Control\UserFoldersController.cs" />
-    <Compile Include="UserFolders\DataAccess\IUserFolderDataAccess.cs">
+    <Compile Update="UserFolders\DataAccess\IUserFolderDataAccess.cs">
       <DependentUpon>UserFolderDataAccess.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserFolders\DataAccess\IUserFoldersDataAccess.cs">
+    <Compile Update="UserFolders\DataAccess\IUserFoldersDataAccess.cs">
       <DependentUpon>UserFoldersDataAccess.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserFolders\DataAccess\UserFolderDataAccess.cs" />
-    <Compile Include="UserFolders\DataAccess\UserFoldersDataAccess.cs" />
-    <Compile Include="UserFolders\View\SelectUserFolderForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserFolders\View\SelectUserFolderForm.Designer.cs">
-      <DependentUpon>SelectUserFolderForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserFolders\View\UserFolderForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserFolders\View\UserFolderForm.Designer.cs">
-      <DependentUpon>UserFolderForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserFolders\View\UserFolderMode.cs" />
-    <Compile Include="Utils\IJsonFileWriter.cs">
+    <Compile Update="Utils\IJsonFileWriter.cs">
       <DependentUpon>JsonFileWriter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utils\JsonFileWriter.cs" />
-    <Compile Include="View\Elements\ListViewItemWithObjectValue.cs" />
-    <Compile Include="View\Elements\RemovalFileTypeCandidateListViewItem.cs" />
-    <Compile Include="View\Elements\UserFolderListViewItem.cs" />
-    <Compile Include="View\Elements\UserFolderToolStripMenuItem.cs">
+    <Compile Update="View\Elements\UserFolderToolStripMenuItem.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\Elements\PluginListViewItem.cs" />
-    <Compile Include="View\Helpers\NonPluginFilesScannerUi.cs" />
-    <Compile Include="Plugins\View\EnterPluginInformationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plugins\View\EnterPluginInformationForm.Designer.cs">
-      <DependentUpon>EnterPluginInformationForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\View\FolderScannerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plugins\View\FolderScannerForm.Designer.cs">
-      <DependentUpon>FolderScannerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\View\InstallPluginsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plugins\View\InstallPluginsForm.Designer.cs">
-      <DependentUpon>InstallPluginsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\View\MissingDependenciesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plugins\View\MissingDependenciesForm.Designer.cs">
-      <DependentUpon>MissingDependenciesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\View\MoveOrCopyForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plugins\View\MoveOrCopyForm.Designer.cs">
-      <DependentUpon>MoveOrCopyForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\View\QuarantinedPluginFilesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plugins\View\QuarantinedPluginFilesForm.Designer.cs">
-      <DependentUpon>QuarantinedPluginFilesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\View\RemotePluginComparer.cs" />
-    <Compile Include="Plugins\View\RemoveUnnecessaryFilesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plugins\View\RemoveUnnecessaryFilesForm.Designer.cs">
-      <DependentUpon>RemoveUnnecessaryFilesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\View\PluginsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plugins\View\PluginsForm.Designer.cs">
-      <DependentUpon>PluginsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plugins\View\ReadmeFilesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plugins\View\ReadmeFilesForm.Designer.cs">
-      <DependentUpon>ReadmeFilesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Application\View\SC4Buddy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application\View\SC4Buddy.Designer.cs">
-      <DependentUpon>SC4Buddy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserFolders\View\ManageUserFoldersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserFolders\View\ManageUserFoldersForm.Designer.cs">
-      <DependentUpon>ManageUserFoldersForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Application\View\SettingsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Application\View\SettingsForm.Designer.cs">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Application\View\ChangelogForm.resx">
-      <DependentUpon>ChangelogForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\LocalizationStrings.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>LocalizationStrings.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application\View\AboutBox.resx">
-      <DependentUpon>AboutBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plugins\View\EnterPluginInformationForm.resx">
-      <DependentUpon>EnterPluginInformationForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plugins\View\FolderScannerForm.resx">
-      <DependentUpon>FolderScannerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plugins\View\InstallPluginsForm.resx">
-      <DependentUpon>InstallPluginsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plugins\View\MissingDependenciesForm.resx">
-      <DependentUpon>MissingDependenciesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plugins\View\MoveOrCopyForm.resx">
-      <DependentUpon>MoveOrCopyForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plugins\View\QuarantinedPluginFilesForm.resx">
-      <DependentUpon>QuarantinedPluginFilesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plugins\View\RemoveUnnecessaryFilesForm.resx">
-      <DependentUpon>RemoveUnnecessaryFilesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plugins\View\PluginsForm.resx">
-      <DependentUpon>PluginsForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plugins\View\ReadmeFilesForm.resx">
-      <DependentUpon>ReadmeFilesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Application\View\SC4Buddy.resx">
-      <DependentUpon>SC4Buddy.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="UserFolders\View\ManageUserFoldersForm.resx">
-      <DependentUpon>ManageUserFoldersForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserFolders\View\SelectUserFolderForm.resx">
-      <DependentUpon>SelectUserFolderForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserFolders\View\UserFolderForm.resx">
-      <DependentUpon>UserFolderForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Properties\app.manifest" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\error.png" />
@@ -447,10 +123,6 @@
     <Content Include="Resources\Wallpapers\11.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="Application\View\SettingsForm.resx">
-      <DependentUpon>SettingsForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <Content Include="Resources\Wallpapers\1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -502,24 +174,29 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\BuddyServerApiClient\BuddyServerApiClient.csproj">
-      <Project>{D708A5BD-DB4C-4B5A-A703-FCBFBB8ABE4F}</Project>
-      <Name>BuddyServerApiClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NiheiCommon\NiheiCommon.csproj">
-      <Project>{43f9af3f-d57d-421d-ba98-87fd499ca314}</Project>
-      <Name>NiheiCommon</Name>
-    </ProjectReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SystemWebAdapters" Version="1.4.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="8.0.0" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="8.0.0" />
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+  <ItemGroup>
+    <ProjectReference Include="..\BuddyServerApiClient\BuddyServerApiClient.csproj" />
+    <ProjectReference Include="..\NiheiCommon\NiheiCommon.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ByteSize" Version="2.1.2" />
+    <PackageReference Include="log4net" Version="2.0.17" />
+    <PackageReference Include="morelinq" Version="4.3.0" />
+    <PackageReference Include="RestSharp" Version="111.4.1" />
+    <PackageReference Include="SharpCompress" Version="0.37.2" />
+    <PackageReference Include="ZstdSharp.Port" Version="0.8.1" />
+  </ItemGroup>
 </Project>

@@ -283,7 +283,7 @@
 
             foundFiles = filenames;
 
-            Invoke(new MethodInvoker(RepopulateViews));
+            Invoke(new System.Windows.Forms.MethodInvoker(RepopulateViews));
         }
 
         private void FolderScannerFormFormClosing(object sender, FormClosingEventArgs e)
@@ -499,7 +499,7 @@
             if (!folderScannerController.ScanFolder(userFolder))
             {
                 Invoke(
-                    new MethodInvoker(
+                    new System.Windows.Forms.MethodInvoker(
                         () =>
                             {
                                 MessageBox.Show(

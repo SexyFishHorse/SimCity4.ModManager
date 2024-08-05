@@ -65,7 +65,7 @@
                 }
             }
 
-            return matchedPlugins.Any() ? plugins.First(x => x.Id == matchedPlugins.MaxBy(y => y.Value).First().Key) : null;
+            return matchedPlugins.Any() ? plugins.First(x => x.Id == matchedPlugins.MaxBy(y => y.Value).Key) : null;
         }
 
         public IDictionary<PluginFile, Plugin> GetMostLikelyPluginForEachFile(ICollection<PluginFile> inputFiles, BackgroundWorker backgroundWorker)
