@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<OutputType>Library</OutputType>
+		<RootNamespace>SimCity4.ModManager</RootNamespace>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Castle.Core" Version="5.1.1" />
+		<PackageReference Include="FluentAssertions" Version="6.12.0" />
+		<PackageReference Include="FluentAssertions.Analyzers" Version="0.33.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+		<PackageReference Include="NSubstitute" Version="5.1.0" />
+		<PackageReference Include="NSubstitute.Analyzers.CSharp" Version="1.0.17">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="xunit" Version="2.9.0" />
+		<PackageReference Include="xunit.abstractions" Version="2.0.3" />
+		<PackageReference Include="xunit.analyzers" Version="1.15.0" />
+		<PackageReference Include="xunit.assert" Version="2.9.0" />
+		<PackageReference Include="xunit.core" Version="2.9.0" />
+		<PackageReference Include="xunit.extensibility.core" Version="2.9.0" />
+		<PackageReference Include="xunit.extensibility.execution" Version="2.9.0" />
+		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <ProjectReference Include="..\..\src\SimCity4.ModManager\SimCity4.ModManager.csproj" />
+	  <ProjectReference Include="..\..\src\SimCity4.ModManager.App\SimCity4.ModManager.App.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="TestFiles\dat\file.dat">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="TestFiles\multirar\archive.part1.rar">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="TestFiles\multirar\archive.part2.rar">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="TestFiles\rar\archive.rar">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="TestFiles\zip\archive.zip">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>

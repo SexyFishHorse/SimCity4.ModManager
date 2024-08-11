@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{E2BC8B60-FB40-4567-845D-A442909838B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimCity4.ModManager.Test", "test\SimCity4.ModManager.Test\SimCity4.ModManager.Test.csproj", "{5ED4E19F-1028-4411-9DCB-DE1834D50B99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2D29B3DA-1E27-48C5-85C9-1B47E69490AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimCity4.ModManager.App", "src\SimCity4.ModManager.App\SimCity4.ModManager.App.csproj", "{ED123E0D-D6E1-4CAB-8F10-5948DA1CE731}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuddyServerApiClient", "src\BuddyServerApiClient\BuddyServerApiClient.csproj", "{A310F7C4-2C5C-4D0D-98D9-427A4E8F37E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimCity4.ModManager", "src\SimCity4.ModManager\SimCity4.ModManager.csproj", "{92236689-68FB-4644-B408-9EF844CF834A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ED4E19F-1028-4411-9DCB-DE1834D50B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED4E19F-1028-4411-9DCB-DE1834D50B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED4E19F-1028-4411-9DCB-DE1834D50B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED4E19F-1028-4411-9DCB-DE1834D50B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED123E0D-D6E1-4CAB-8F10-5948DA1CE731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED123E0D-D6E1-4CAB-8F10-5948DA1CE731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED123E0D-D6E1-4CAB-8F10-5948DA1CE731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED123E0D-D6E1-4CAB-8F10-5948DA1CE731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A310F7C4-2C5C-4D0D-98D9-427A4E8F37E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A310F7C4-2C5C-4D0D-98D9-427A4E8F37E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A310F7C4-2C5C-4D0D-98D9-427A4E8F37E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A310F7C4-2C5C-4D0D-98D9-427A4E8F37E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92236689-68FB-4644-B408-9EF844CF834A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92236689-68FB-4644-B408-9EF844CF834A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92236689-68FB-4644-B408-9EF844CF834A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92236689-68FB-4644-B408-9EF844CF834A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5ED4E19F-1028-4411-9DCB-DE1834D50B99} = {E2BC8B60-FB40-4567-845D-A442909838B6}
+		{ED123E0D-D6E1-4CAB-8F10-5948DA1CE731} = {2D29B3DA-1E27-48C5-85C9-1B47E69490AE}
+		{A310F7C4-2C5C-4D0D-98D9-427A4E8F37E6} = {2D29B3DA-1E27-48C5-85C9-1B47E69490AE}
+		{92236689-68FB-4644-B408-9EF844CF834A} = {2D29B3DA-1E27-48C5-85C9-1B47E69490AE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44F08419-EC2E-40BF-A1C1-165F8560ABA0}
+	EndGlobalSection
+EndGlobal
